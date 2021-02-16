@@ -124,7 +124,7 @@ function draw() {
 
   }
 
-  if(mousePressedOver(sett)){
+  if(touches[970, 1800]){
 
     gameState = "SETT";
     settScreen();
