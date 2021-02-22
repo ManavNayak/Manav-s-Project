@@ -98,6 +98,23 @@ function setup() {
   dt.addImage("dt", dtImg);
   dt.y = 4000;
   dt.scale = 2.5;
+  
+  document.addEventListener("touchstart", touchHandler);
+
+document.addEventListener("touchmove", touchHandler);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
