@@ -99,9 +99,7 @@ function setup() {
   dt.y = 4000;
   dt.scale = 2.5;
   
-  document.addEventListener("touchstart", touchHandler);
 
-document.addEventListener("touchmove", touchHandler);
 
 
 
@@ -141,7 +139,7 @@ function draw() {
 
   }
 
-  if(touches[970].x && touches[1800].y){
+  if(mousePressedOver (sett)){
 
     gameState = "SETT";
     settScreen();
