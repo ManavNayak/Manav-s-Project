@@ -139,7 +139,7 @@ function draw() {
 
   }
 
-  if(mouseOver(sett)){
+  if(mouseover(sett)){
 
     gameState = "SETT";
     settScreen();
