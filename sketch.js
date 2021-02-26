@@ -139,7 +139,7 @@ function draw() {
 
   }
 
-  if(touchstarted(sett)){
+  if(mouseClicked(sett)){
 
     gameState = "SETT";
     settScreen();
