@@ -139,7 +139,7 @@ function draw() {
 
   }
 
-  if(mouseClicked(sett)){
+  if(mouseIsPressed(sett)){
 
     gameState = "SETT";
     settScreen();
