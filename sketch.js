@@ -151,6 +151,14 @@ function draw() {
     window.open("https://www.youtube.com/channel/UCujaU8f2xCEJAY9F_tEGbcg?", "_self");
 
   }
+  
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    deviceEventType = 'touchstart'
+} else {
+//If its not a mobile device use 'click'
+    deviceEventType = 'click'
+}
+
 
    console.log(gameState);
   
