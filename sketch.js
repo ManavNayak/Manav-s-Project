@@ -4,7 +4,7 @@ var box2, main, load, title, mainImg, loadImg, titleImg;
 var greet, greetImg, bgm, mi, my, ch, miImg, myImg, chImg, sett, settImg;
 var rate, rateImg, back1, back1Img, dt, dtImg, fw, fwImg, htp, htpImg;
 
-var gameState = "BRAND";
+var gameState = "BRAND"
 
 function preload(){
 
