@@ -8,47 +8,47 @@ var gameState = "BRAND";
 
 function preload(){
 
-  bg = loadImage("bg.jpeg");
-  brandImg = loadImage("brand.png");
-  mainImg = loadImage("main.jpg");
-  loadImg = loadImage("load.png");
-  titleImg = loadImage("title.jpg");
-  greetImg = loadImage("greet.jpg");
-  miImg = loadImage("mi.png");
-  myImg = loadImage("my.png");
-  chImg = loadImage("ch.png");
-  settImg = loadImage("sett.png");
-  rateImg = loadImage("rate.png");
-  htpImg = loadImage("htp.png");
-  dtImg = loadImage("dt.png");
-  fwImg = loadImage("fw.png");
-  back1Img = loadImage("back.png");
+  bg = loadImage("images/bg.jpeg");
+  brandImg = loadImage("images/brand.png");
+  mainImg = loadImage("images/main.jpg");
+  loadImg = loadImage("images/load.png");
+  titleImg = loadImage("images/title.jpg");
+  greetImg = loadImage("images/greet.jpg");
+  miImg = loadImage("images/mi.png");
+  myImg = loadImage("images/my.png");
+  chImg = loadImage("images/ch.png");
+  settImg = loadImage("images/sett.png");
+  rateImg = loadImage("images/rate.png");
+  htpImg = loadImage("images/htp.png");
+  dtImg = loadImage("images/dt.png");
+  fwImg = loadImage("images/fw.png");
+  back1Img = loadImage("images/back.png");
 
 }
 
 function setup() {
-  createCanvas(1080, 1920);
+  createCanvas(windowWidth, windowHeight);
   
-  brand = createSprite(535 , 955, 100, 100);
+  brand = createSprite(width/2-150, height/4);
   brand.addImage("brand", brandImg);
   brand.scale = 2.5;
 
-  main = createSprite(540 , 940, 100, 100);
+  main = createSprite(width/2-150 , height/4+150, 100, 100);
   main.addImage("main", mainImg);
-  main.scale = 3;
+  main.scale = 2.5;
   main.visible = false;
 
-  greet = createSprite(540 , 350, 100, 100);
+  greet = createSprite(width/2 , height/4, 100, 100);
   greet.addImage("greet", greetImg);
   greet.scale = 1;
   greet.visible = false;
 
-  load = createSprite(540 , 1500, 100, 100);
+  load = createSprite(width/2-300, height/2+300, 100, 100);
   load.addImage("load", loadImg);
-  load.scale = 2;
+  load.scale = 1.5;
   load.visible = false;
 
-  title = createSprite(560 , 150, 100, 100);
+  title = createSprite(width/2-150 , 100, 100, 100);
   title.addImage("title", titleImg);
   title.scale = 1.1;
   title.visible = false;
@@ -59,20 +59,43 @@ function setup() {
   box2 = createSprite(540 , 960, 100, 100);
   box2.visible = false;
   
-  mi = createSprite(540 , 960, 100, 100);
-  mi.addImage("mi", miImg);
-  mi.y = 4000;
-  mi.scale = 2.5;
+  // mi = createSprite(540 , 960, 100, 100);
+  // mi.addImage("mi", miImg);
+  // mi.y = 4000;
+  // mi.scale = 2.5;
 
-  my = createSprite(540 , 1360, 100, 100);
-  my.addImage("my", myImg);
-  my.y = 4000;
-  my.scale = 2.5;
+  mi = createButton("Mission");
+  mi.position(width/2+200,height/2+200);
+  mi.size(200,50)
+  mi.style("font-size","30px");
+  mi.style("background-color","#000000")
+  mi.style("color","#ffffff");
 
-  ch = createSprite(540 , 1760, 100, 100);
-  ch.addImage("ch", chImg);
-  ch.y = 4000;
-  ch.scale = 2.5;
+  // my = createSprite(540 , 1360, 100, 100);
+  // my.addImage("my", myImg);
+  // my.y = 4000;
+  // my.scale = 2.5;
+
+  my = createButton("Mystery");
+  my.position(width/2+200,height/2+400);
+  my.size(200,50)
+  my.style("font-size","30px");
+  my.style("background-color","#000000")
+  my.style("color","#ffffff");
+
+
+  // ch = createSprite(540 , 1760, 100, 100);
+  // ch.addImage("ch", chImg);
+  // ch.y = 4000;
+  // ch.scale = 2.5;
+
+  ch = createButton("Chapters");
+  ch.position(width/2+200,height/2+600);
+  ch.size(200,50)
+  ch.style("font-size","30px");
+  ch.style("background-color","#000000")
+  ch.style("color","#ffffff");
+
 
   sett = createSprite(970 , 1890, 100, 100);
   sett.addImage("sett", settImg);
@@ -183,9 +206,22 @@ function homeScreen(){
 
   if(gameState === "HOME"){
 
-    mi.y = 1100;
-    my.y = 1350;
-    ch.y = 1600;
+    // mi.y = 1100;
+    // my.y = 1350;
+    // ch.y = 1600;
+
+    mi.mousePressed(()=>{
+      alert("To The Mission");
+    });
+
+    my.mousePressed(()=>{
+      alert("Mysteries..");
+    });
+
+    ch.mousePressed(()=>{
+      alert("Select Your Chapter");
+    });
+
     sett.y = 1800;
 
     box1.velocityX = 0;
