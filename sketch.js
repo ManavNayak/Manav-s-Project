@@ -67,6 +67,7 @@ function setup() {
   mi = createButton("Mission");
   mi.position(width/2+200,height/2+200);
   mi.size(200,50)
+  mi.addImage("mi", miImg);
   mi.style("font-size","30px");
   mi.style("background-color","#000000")
   mi.style("color","#ffffff");
